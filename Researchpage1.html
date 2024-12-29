@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Researcher Data Request | HealthIn</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Logo Styles */
+        .logo-img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        /* Header and Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 60px;
+            background: #e3efeb;
+            font-weight: bold;
+            font-size: 25px;
+            align-items: center;
+        }
+
+        header .logo span {
+            color: #1b9c85;
+        }
+
+        nav a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #41afa1;
+            transition: color 0.5s;
+        }
+
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            border-radius: 25px;
+            font-size: 15px;
+            border: 2px solid #cccccc;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #5a9183;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #6ca184;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #92bdb0;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #5a9183;
+            outline: none;
+            box-shadow: 0 0 5px rgba(90, 145, 131, 0.5);
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* CAPTCHA Styling */
+        .captcha-placeholder {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Submit Button */
+        button {
+            background-color: #6ca184;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a9183;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Highlight required fields */
+        .required {
+            color: #e74c3c;
+        }
+        footer {
+            background: #5a9183;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Logo with Image -->
+        <div class="logo">
+            <img src="logo.jpg" alt="HealthIn Logo" class="logo-img">
+            Health<span>In</span>
+        </div>
+        
+        <!-- Search Bar Section -->
+        <section class="search-section">
+            <input type="text" placeholder="Search for medical conditions..." class="search-bar">
+        </section>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="lagin as a.html">Login</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Researcher Data Request Form</h2>
+        <form action="#" method="post">
+            <!-- Subject -->
+            <label for="subject">Subject <span class="required">*</span></label>
+            <input type="text" id="subject" placeholder="Enter Subject" required>
+            
+            <!-- Full Name -->
+            <label for="full-name">Your Full Name <span class="required">*</span></label>
+            <input type="text" id="full-name" placeholder="Enter Your Full Name" required>
+            
+            <!-- Email -->
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="Enter Your Email" required>
+            
+            <!-- Company -->
+            <label for="company">Company/Location <span class="required">*</span></label>
+            <input type="text" id="company" placeholder="Enter Company or Location" required>
+            
+            <!-- Contact -->
+            <label for="contact">Contact No <span class="required">*</span></label>
+            <input type="tel" id="contact" placeholder="Enter Contact Number" required>
+            
+            <!-- CNIC -->
+            <label for="cnic">CNIC <span class="required">*</span></label>
+            <input type="text" id="cnic" placeholder="Enter CNIC" required>
+            
+            <!-- Mailing Address -->
+            <label for="address">Mailing Address</label>
+            <textarea id="address" rows="3" placeholder="Enter Mailing Address"></textarea>
+            
+            <!-- Message -->
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Write Your Message"></textarea>
+            
+            <!-- CAPTCHA -->
+            <div class="captcha">
+                <label>CAPTCHA <span class="required">*</span></label>
+                <div class="captcha-placeholder">
+                    <input type="checkbox" id="captcha">
+                    <label for="captcha">I'm not a robot</label>
+                </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>Contact us at Ph:051-9281111,Fax: 051-9281357 </p>
+        <p> Email:info@HealthIn.gop.pk </p>
+    </footer>
+</body>
+</html>
