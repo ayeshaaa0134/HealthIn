@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Logo Styles */
+        .logo-img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        /* Header and Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 60px;
+            background: #e3efeb;
+            font-weight: bold;
+            font-size: 25px;
+            align-items: center;
+        }
+
+        header .logo span {
+            color: #1b9c85;
+        }
+
+        nav a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #41afa1;
+            transition: color 0.5s;
+        }
+
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #cccccc;
+            border-radius: 25px;
+            font-size: 15px;
+        }
+
+        /* Main Layout */
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .feedback-container {
+            background-color: #92bdb0;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            text-align: center;
+            margin: 20px auto 40px auto;
+        }
+
+        .feedback-container h1 {
+            color: #5a9183;
+            margin-bottom: 20px;
+        }
+
+        .feedback-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feedback-form label {
+            color: #5a9183;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        .feedback-form select, 
+        .feedback-form textarea, 
+        .feedback-form button {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #6ca184;
+            margin-bottom: 15px;
+        }
+
+        .feedback-form select {
+            background-color: #e3ebea;
+        }
+
+        .feedback-form textarea {
+            resize: none;
+            background-color: #e3ebea;
+        }
+
+        .feedback-form button {
+            background-color: #6ca184;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .feedback-form button:hover {
+            background-color: #5a9183;
+        }
+
+        /* Rating Stars */
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .rating-stars input {
+            display: none;
+        }
+
+        .rating-stars label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .rating-stars input:checked ~ label,
+        .rating-stars input:hover ~ label,
+        .rating-stars label:hover,
+        .rating-stars label:hover ~ label {
+            color: #ffd700;
+        }
+
+        /* Side Sections */
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            color: #5a9183;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .ad {
+            font-size: 16px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #e6f4f1;
+            border: 1px solid #5a9183;
+            border-radius: 5px;
+        }
+
+        .sidebar .ad img {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #5a9183;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px; /* Blank space before footer */
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Logo with Image -->
+        <div class="logo">
+            <img src="logo.jpg" alt="HealthIn Logo" class="logo-img">
+            Health<span>In</span>
+        </div>
+
+        <!-- Search Bar Section -->
+        <section class="search-section">
+            <input type="text" placeholder="Search for medical conditions..." class="search-bar">
+        </section>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <h2>Why Your Feedback Matters</h2>
+            <p>Your feedback helps us improve our services and provide better care to you and others.</p>
+            <p>We value your input to create a more effective and friendly experience.</p>
+        </aside>
+
+        <!-- Feedback Form -->
+        <section class="feedback-container">
+            <h1>We Value Your Feedback</h1>
+            <form class="feedback-form">
+                <label for="experience">Rate Your Experience:</label>
+
+                <!-- Rating Stars -->
+                <div class="rating-stars">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">&#9733;</label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">&#9733;</label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">&#9733;</label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">&#9733;</label>
+
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">&#9733;</label>
+                </div>
+
+                <label for="comments">Your Comments:</label>
+                <textarea id="comments" rows="5" placeholder="Enter your feedback here..."></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <h2>Special Offer</h2>
+            <div class="ad">
+                <p>Join our premium health subscription today and get your first month FREE!</p>
+                <img src="promo.jpg" alt="Promotional Offer">
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Contact us at Ph:051-9281111, Fax: 051-9281357</p>
+        <p>Email: info@HealthIn.gop.pk</p>
+    </footer>
+</body>
+</html>
